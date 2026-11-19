@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pooja - Curriculum Vitae | MCA Student (PIM Udupi)</title>
+  <meta name="description" content="Resume of Pooja, First-year MCA student at Poornaprajna Institute of Management (PIM), Udupi, Karnataka.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23ea580c'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-size='56' font-weight='bold'>P</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #ea580c;
+      --secondary: #18181b;
+      --text-main: #18181b;
+      --text-muted: #52525b;
+      --bg-page: #f4f4f5;
+      --bg-card: #ffffff;
+      --border-color: #e4e4e7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.55;
+      padding: 2.5rem 1rem;
+    }
+
+    .top-action-bar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #c2410c;
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 3.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .resume-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .candidate-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--secondary);
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+
+    .candidate-title {
+      font-size: 1.15rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .candidate-institution {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .resume-photo-box {
+      width: 95px;
+      height: 120px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    .resume-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .contact-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+    }
+
+    .resume-section {
+      margin-bottom: 2rem;
+    }
+
+    .section-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.45rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-heading span.badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      background: #fff7ed;
+      color: var(--primary);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      border: 1px solid #fed7aa;
+    }
+
+    .summary-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .entry-item {
+      margin-bottom: 1.25rem;
+    }
+
+    .entry-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+
+    .entry-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .entry-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: #fff7ed;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .entry-subtitle {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .entry-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .skills-matrix {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .matrix-category {
+      background: #fafafa;
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+
+    .category-title {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-badge {
+      font-size: 0.8125rem;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 500;
+      color: var(--secondary);
+    }
+
+    .skill-badge .level {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6875rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-left: 0.25rem;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        color: #000000;
+      }
+
+      .top-action-bar {
+        display: none !important;
+      }
+
+      .resume-container {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="top-action-bar">
+    <a href="index.html" class="btn btn-outline">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      Back to Portfolio
+    </a>
+
+    <button onclick="window.print()" class="btn btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Main Resume Sheet -->
+  <main class="resume-container">
+    
+    <!-- Header -->
+    <header class="resume-header">
+      <div class="header-top">
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <div class="resume-photo-box">
+            <img src="assets/images/pooja.jpg" alt="Pooja Portrait">
+          </div>
+          <div>
+            <h1 class="candidate-name">Pooja</h1>
+            <p class="candidate-title">First-Year MCA Student &amp; Aspiring Software Developer</p>
+            <p class="candidate-institution">Poornaprajna Institute of Management (PIM), Udupi, Karnataka</p>
+          </div>
+        </div>
+
+        <div class="contact-details-grid">
+          <div class="contact-item">
+            <strong>Location:</strong> Udupi, Karnataka, India
+          </div>
+          <div class="contact-item">
+            <strong>Phone:</strong> <a href="tel:9035378246">+91 9035378246</a>
+          </div>
+          <div class="contact-item">
+            <strong>Email:</strong> <a href="mailto:poojapoojary200515@gmail.com">poojapoojary200515@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>GitHub:</strong> <a href="https://github.com/poojapoojary200515-spec" target="_blank" rel="noopener noreferrer">poojapoojary200515-spec</a>
+          </div>
+          <div class="contact-item" style="grid-column: span 2;">
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pooja-poojary-5b2244357" target="_blank" rel="noopener noreferrer">linkedin.com/in/pooja-poojary-5b2244357</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="resume-section">
+      <h2 class="section-heading">Professional Summary</h2>
+      <p class="summary-text">
+        Motivated and hardworking First-year Master of Computer Applications (MCA) student at Poornaprajna Institute of Management (PIM) with a solid academic foundation in Computer Science and an interest in developing new technical skills. Possesses a positive attitude, disciplined time-management capabilities, and a continuous learning mindset. Dedicated to building a successful software engineering and data analytics career, expanding technical expertise, and contributing positively to professional and team environments.
+      </p>
+    </section>
+
+    <!-- Academic Education -->
+    <section class="resume-section">
+      <h2 class="section-heading">Academic Education</h2>
+
+      <div class="entry-item">
+        <div class="entry-header">
+          <h3 class="entry-title">Master of Computer Applications (MCA)</h3>
+          <span class="entry-period">2026 – 2028 | Status: Pursuing</span>
+        </div>
+        <div class="entry-subtitle">Poornaprajna Institute of Management (PIM), Udupi, Karnataka</div>
+        <p class="entry-desc">
+          <strong>Specialization:</strong> Computer Applications &amp; Software Development.<br>
+          Focused on core computer science fundamentals, application architecture, software lifecycle, and data engineering.
+        </p>
+      </div>
+
+      <div class="entry-item" style="margin-top: 1.25rem;">
+        <div class="entry-header">
+          <h3 class="entry-title">Bachelor of Science (B.Sc)</h3>
+          <span class="entry-period">2023 – 2026 | Status: Completed</span>
+        </div>
+        <div class="entry-subtitle">Sri Bhuvanendra College, Karkala, Karnataka</div>
+        <p class="entry-desc">
+          <strong>Specialization:</strong> Computer Science &bull; <strong>CGPA:</strong> 8.28 / 10<br>
+          Completed rigorous undergraduate curriculum covering programming fundamentals, computational algorithms, and database systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Verified Technical Skills -->
+    <section class="resume-section">
+      <h2 class="section-heading">
+        Technical Skills &amp; Programming Expertise
+        <span class="badge">Verified Ratings</span>
+      </h2>
+
+      <div class="skills-matrix">
+        <div class="matrix-category">
+          <div class="category-title">Core Languages</div>
+          <div class="skill-badges">
+            <span class="skill-badge">C <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Java <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Python <span class="level">(Basic)</span></span>
+            <span class="skill-badge">JavaScript <span class="level">(Basic)</span></span>
+            <span class="skill-badge">R <span class="level">(Basic)</span></span>
+          </div>
+        </div>
+
+        <div class="matrix-category">
+          <div class="category-title">Web &amp; Databases</div>
+          <div class="skill-badges">
+            <span class="skill-badge">HTML <span class="level">(Basic)</span></span>
+            <span class="skill-badge">CSS <span class="level">(Basic)</span></span>
+            <span class="skill-badge">SQL <span class="level">(Basic)</span></span>
+            <span class="skill-badge">MySQL <span class="level">(Basic)</span></span>
+            <span class="skill-badge">MongoDB <span class="level">(Basic)</span></span>
+            <span class="skill-badge">SQLite <span class="level">(Basic)</span></span>
+          </div>
+        </div>
+
+        <div class="matrix-category">
+          <div class="category-title">Data Science &amp; AI Tools</div>
+          <div class="skill-badges">
+            <span class="skill-badge">NumPy <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Pandas <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Jupyter Notebook <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Data Analysis <span class="level">(Basic)</span></span>
+          </div>
+        </div>
+
+        <div class="matrix-category">
+          <div class="category-title">Dev Tools, Cloud &amp; CS Fundamentals</div>
+          <div class="skill-badges">
+            <span class="skill-badge">VS Code <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Git / GitHub Pages <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Vercel <span class="level">(Basic)</span></span>
+            <span class="skill-badge">DSA &amp; OOP <span class="level">(Basic)</span></span>
+            <span class="skill-badge">Testing &amp; Debugging <span class="level">(Basic)</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Projects -->
+    <section class="resume-section">
+      <h2 class="section-heading">Featured Projects &amp; Technical Artifacts</h2>
+
+      <div class="entry-item">
+        <div class="entry-header">
+          <h3 class="entry-title">Automobile Sales Analysis and Prediction Key Features</h3>
+          <span class="entry-period">Status: Completed | Category: Machine Learning</span>
+        </div>
+        <div class="entry-subtitle">Tech Stack: Python, Pandas, NumPy, Machine Learning, Data Analytics, Jupyter Notebook</div>
+        <p class="entry-desc">
+          &bull; <strong>Overview:</strong> Developed a Python-based data analytics and machine learning application to analyze historical automobile sales data, evaluate market trends, and forecast vehicle sales numbers.<br>
+          &bull; <strong>Problem Solved:</strong> Addressed the business challenge of uncovering automobile sales patterns and customer preferences to assist dealerships and automobile manufacturers in making informed business decisions.<br>
+          &bull; <strong>Key Contributions:</strong> Performed comprehensive data collection and sanitization, built exploratory data visualizations to identify purchase drivers, and engineered predictive models for sales forecasting.
+        </p>
+      </div>
+    </section>
+
+    <!-- Certifications & Technical Workshops -->
+    <section class="resume-section">
+      <h2 class="section-heading">Certifications &amp; Technical Workshops</h2>
+
+      <div class="entry-item">
+        <div class="entry-header">
+          <h3 class="entry-title">AI Fundamentals Training Program</h3>
+          <span class="entry-period">May 4, 2026 | Verified Completion</span>
+        </div>
+        <div class="entry-subtitle">Upfront &bull; AVPN &bull; Anudip Foundation &bull; Google.org &bull; Asian Development Bank (ADB)</div>
+        <p class="entry-desc">
+          Successfully completed the AI Fundamentals program under the AI Opportunity Fund: Asia Pacific by AVPN, with support from Google.org and ADB. Acquired core competencies in artificial intelligence workflows, data analysis pipelines, and responsible AI implementation.
+        </p>
+      </div>
+
+      <div class="entry-item" style="margin-top: 1.25rem;">
+        <div class="entry-header">
+          <h3 class="entry-title">AI for Students: Build Your Own Generative AI Model</h3>
+          <span class="entry-period">February 22, 2025 | NxtWave</span>
+        </div>
+        <div class="entry-subtitle">Workshop conducted by AI Expert Mr. Abhinav Devaguptapu &bull; NxtWave CEO Rahul Attuluri</div>
+        <p class="entry-desc">
+          Participated in hands-on generative AI training focused on prompt design, foundation models, generative architecture mechanics, and deploying specialized student AI solutions in the AI era.
+        </p>
+      </div>
+
+      <div class="entry-item" style="margin-top: 1.25rem;">
+        <div class="entry-header">
+          <h3 class="entry-title">Chandrayaan - 3 Mahaquiz Completion</h3>
+          <span class="entry-period">ISRO &amp; MyGov &bull; Govt of India</span>
+        </div>
+        <div class="entry-subtitle">Indian Space Research Organisation (Director CBPO) &bull; MyGov CEO &bull; Azadi Ka Amrit Mahotsav</div>
+        <p class="entry-desc">
+          Honored with official Certificate of Participation acknowledging national participation and completion of the space science and lunar exploration Chandrayaan-3 mission assessment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Career Trajectory, Languages & Interests -->
+    <section class="resume-section">
+      <h2 class="section-heading">Target Roles, Interests &amp; Languages</h2>
+
+      <div class="skills-matrix">
+        <div class="matrix-category">
+          <div class="category-title">Target Roles</div>
+          <p class="entry-desc">Software Developer, Web Developer, Mobile App Developer</p>
+        </div>
+
+        <div class="matrix-category">
+          <div class="category-title">Primary Focus Areas</div>
+          <p class="entry-desc">Web Development, Data Science, Machine Learning, App Development, Artificial Intelligence</p>
+        </div>
+
+        <div class="matrix-category">
+          <div class="category-title">Natural Languages</div>
+          <p class="entry-desc">English (Fluent/Professional), Kannada (Native/Fluent)</p>
+        </div>
+
+        <div class="matrix-category">
+          <div class="category-title">Extracurricular Interests</div>
+          <p class="entry-desc">Dance, Time Management, Continual Skill Acquisition</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
